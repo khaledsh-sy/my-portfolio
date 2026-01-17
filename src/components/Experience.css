@@ -1,0 +1,73 @@
+.experience {
+  background-color: var(--bg-primary);
+}
+
+.experience-timeline {
+  max-width: 900px;
+}
+
+.experience-item {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--bg-tertiary);
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.experience-header {
+  margin-bottom: 20px;
+}
+
+.experience-title {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.experience-company {
+  margin-bottom: 5px;
+}
+
+.company-name {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.company-location {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.experience-period {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-family: 'Fira Code', monospace;
+}
+
+.experience-responsibilities {
+  list-style: none;
+  padding-left: 0;
+}
+
+.experience-responsibilities li {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.experience-responsibilities li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .experience-item {
+    padding: 20px;
+  }
+}

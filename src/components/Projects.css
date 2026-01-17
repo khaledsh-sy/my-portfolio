@@ -1,0 +1,149 @@
+.projects {
+  background-color: var(--bg-primary);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--bg-tertiary);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-image {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: var(--bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.project-image:has(.image-carousel) {
+  width: 280px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.kozone-project {
+  grid-column: 1 / -1;
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+
+.kozone-project .project-image:has(.image-carousel) {
+  width: 100%;
+  max-width: 600px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.project-icon {
+  font-size: 4rem;
+}
+
+.project-content {
+  padding: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.project-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-tag {
+  padding: 5px 12px;
+  background-color: var(--bg-primary);
+  color: var(--primary-color);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-family: 'Fira Code', monospace;
+  border: 1px solid var(--bg-tertiary);
+}
+
+.project-links-below {
+  padding: 20px 30px;
+  border-bottom: 1px solid var(--bg-tertiary);
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-secondary);
+}
+
+.project-link-below {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: var(--bg-primary);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.project-link-below svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image {
+    height: 300px;
+  }
+
+  .project-image:has(.image-carousel) {
+    width: 280px;
+    height: 500px;
+  }
+
+  .kozone-project {
+    margin-top: 20px;
+  }
+
+  .kozone-project .project-image:has(.image-carousel) {
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+  }
+
+  .project-content {
+    padding: 20px;
+  }
+
+  .project-links-below {
+    padding: 15px 20px;
+  }
+}
